@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using ServiceLocator.Main;
 using UnityEngine.SceneManagement;
 using ServiceLocator.Wave;
+using ServiceLocator.Player;
+using ServiceLocator.Events;
 
 namespace ServiceLocator.UI
 {
@@ -36,11 +38,13 @@ namespace ServiceLocator.UI
         [SerializeField] private Button quitButton;
 
         private WaveService waveService;
+        private PlayerService playerService;
+        private EventService eventService;
 
 
         private void Start()
         {
-            monkeySelectionController = new MonkeySelectionUIController(cellContainer, monkeyCellPrefab, monkeyCellScriptableObjects);
+            monkeySelectionController = new MonkeySelectionUIController(cellContainer, monkeyCellPrefab, monkeyCellScriptableObjects, playerService);
             MonkeySelectionPanel.SetActive(false);
             monkeySelectionController.SetActive(false);
 
@@ -53,10 +57,12 @@ namespace ServiceLocator.UI
             playAgainButton.onClick.AddListener(OnPlayAgainButtonClicked);
         }
 
-        public void SubscribeToEvents() => GameService.Instance.EventService.OnMapSelected.AddListener(OnMapSelected);
-        public void Init(WaveService waveService)
+        public void SubscribeToEvents() => eventService.OnMapSelected.AddListener(OnMapSelected);
+        public void Init(WaveService waveService, PlayerService playerService, EventService eventService)
         {
+            this.eventService = eventService;
             this.waveService = waveService;
+            this.playerService = playerService;
         }
         public void OnMapSelected(int mapID)
         {
