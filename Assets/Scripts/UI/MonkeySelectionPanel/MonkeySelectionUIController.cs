@@ -9,10 +9,11 @@ namespace ServiceLocator.UI
     {
         private Transform cellContainer;
         private List<MonkeyCellController> monkeyCellControllers;
-
+        private PlayerService playerService;
 
         public MonkeySelectionUIController(Transform cellContainer, MonkeyCellView monkeyCellPrefab, List<MonkeyCellScriptableObject> monkeyCellScriptableObjects, PlayerService playerService)
         {
+            this.playerService = playerService;
             this.cellContainer = cellContainer;
             monkeyCellControllers = new List<MonkeyCellController>();
 
