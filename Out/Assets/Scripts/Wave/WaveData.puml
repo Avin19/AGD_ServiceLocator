@@ -1,0 +1,8 @@
+@startuml
+struct WaveData {
+    + WaveID : int
+}
+class "List`1"<T> {
+}
+WaveData --> "ListOfBloons<BloonType>" "List`1"
+@enduml

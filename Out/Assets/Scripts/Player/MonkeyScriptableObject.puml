@@ -1,0 +1,15 @@
+@startuml
+class MonkeyScriptableObject {
+    + RotationSpeed : float
+    + Range : float
+    + Cost : int
+    + AttackRate : float
+}
+class "List`1"<T> {
+}
+ScriptableObject <|-- MonkeyScriptableObject
+MonkeyScriptableObject --> "Type" MonkeyType
+MonkeyScriptableObject --> "Prefab" MonkeyView
+MonkeyScriptableObject --> "projectileType" ProjectileType
+MonkeyScriptableObject --> "AttackableBloons<BloonType>" "List`1"
+@enduml

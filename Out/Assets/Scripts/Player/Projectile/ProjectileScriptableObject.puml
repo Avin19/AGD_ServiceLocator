@@ -1,0 +1,9 @@
+@startuml
+class ProjectileScriptableObject {
+    + Speed : float
+    + Damage : int
+}
+ScriptableObject <|-- ProjectileScriptableObject
+ProjectileScriptableObject --> "Type" ProjectileType
+ProjectileScriptableObject --> "Sprite" Sprite
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+class MapService {
+    + MapService(mapScriptableObject:MapScriptableObject)
+    + Init(eventService:EventService) : void
+    + GetWayPointsForCurrentMap() : List<Vector3>
+    + GetBloonSpawnPositionForCurrentMap() : Vector3
+    + ValidateSpawnPosition(cursorPosition:Vector3) : void
+    + TryGetMonkeySpawnPosition(cursorPosition:Vector3, spawnPosition:Vector3) : bool
+}
+enum TileOverlayColor {
+    TRANSPARENT,
+    SPAWNABLE,
+    NON_SPAWNABLE,
+}
+MapService +-- TileOverlayColor
+@enduml

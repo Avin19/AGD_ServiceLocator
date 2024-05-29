@@ -1,0 +1,9 @@
+@startuml
+enum ProjectileType {
+    Dart,
+    Shuriken,
+    Bullet,
+    Canon,
+    EnergyBall,
+}
+@enduml

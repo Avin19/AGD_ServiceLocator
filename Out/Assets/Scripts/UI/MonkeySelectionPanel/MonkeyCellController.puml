@@ -1,0 +1,7 @@
+@startuml
+class MonkeyCellController {
+    + MonkeyCellController(playerService:PlayerService, cellContainer:Transform, monkeyCellPrefab:MonkeyCellView, monkeyCellScriptableObject:MonkeyCellScriptableObject)
+    + MonkeyDraggedAt(dragPosition:Vector3) : void
+    + MonkeyDroppedAt(dropPosition:Vector3) : void
+}
+@enduml

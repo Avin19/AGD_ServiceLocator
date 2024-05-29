@@ -1,0 +1,10 @@
+@startuml
+class BloonView {
+    + SetRenderer(spriteToSet:Sprite) : void
+    + SetSortingOrder(sortingOrder:int) : void
+    + PopBloon() : void
+    + PopAnimationPlayed() : void
+}
+MonoBehaviour <|-- BloonView
+BloonView --> "Controller" BloonController
+@enduml

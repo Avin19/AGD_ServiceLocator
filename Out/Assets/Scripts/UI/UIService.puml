@@ -1,0 +1,12 @@
+@startuml
+class UIService {
+    + Init(waveService:WaveService, playerService:PlayerService, eventService:EventService) : void
+    + OnMapSelected(mapID:int) : void
+    + SetNextWaveButton(setInteractable:bool) : void
+    + UpdateHealthUI(healthToDisplay:int) : void
+    + UpdateMoneyUI(moneyToDisplay:int) : void
+    + UpdateWaveProgressUI(waveCompleted:int, totalWaves:int) : void
+    + UpdateGameEndUI(hasWon:bool) : void
+}
+MonoBehaviour <|-- UIService
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class EventService {
+    + EventService()
+}
+class "GameEventController`1"<T> {
+}
+EventService --> "OnMapSelected<int>" "GameEventController`1"
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class BloonPool {
+    + BloonPool(waveService:WaveService, playerService:PlayerService, soundService:SoundService, waveScriptableObject:WaveScriptableObject)
+    + GetBloon(bloonType:BloonType) : BloonController
+}
+class "GenericObjectPool`1"<T> {
+}
+"GenericObjectPool`1" "<BloonController>" <|-- BloonPool
+@enduml

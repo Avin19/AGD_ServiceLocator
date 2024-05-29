@@ -1,0 +1,9 @@
+@startuml
+class WaveService {
+    + WaveService(waveScriptableObject:WaveScriptableObject)
+    + Init(uiService:UIService, mapService:MapService, playerService:PlayerService, soundService:SoundService, eventService:EventService) : void
+    + StarNextWave() : void
+    + <<async>> SpawnBloons(bloonsToSpawn:List<BloonType>, spawnPosition:Vector3, startingWaypointIndex:int, spawnRate:float) : void
+    + RemoveBloon(bloon:BloonController) : void
+}
+@enduml

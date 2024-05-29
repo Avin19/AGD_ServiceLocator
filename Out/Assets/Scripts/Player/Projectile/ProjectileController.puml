@@ -1,0 +1,15 @@
+@startuml
+class ProjectileController {
+    + ProjectileController(playerService:PlayerService, projectilePrefab:ProjectileView, projectileContainer:Transform)
+    + Init(projectileScriptableObject:ProjectileScriptableObject) : void
+    + SetPosition(spawnPosition:Vector3) : void
+    + SetTarget(target:BloonController) : void
+    + UpdateProjectileMotion() : void
+    + OnHitBloon(bloonHit:BloonController) : void
+    + ResetProjectile() : void
+}
+enum ProjectileState {
+    ACTIVE,
+    HIT_TARGET,
+}
+@enduml

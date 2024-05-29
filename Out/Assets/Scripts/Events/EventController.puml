@@ -1,0 +1,8 @@
+@startuml
+class "GameEventController`1"<T> {
+    +  <<event>> baseEvent : Action<T> 
+    + InvokeEvent(type:T) : void
+    + AddListener(listener:Action<T>) : void
+    + RemoveListener(listener:Action<T>) : void
+}
+@enduml

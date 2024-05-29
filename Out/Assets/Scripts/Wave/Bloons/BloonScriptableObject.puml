@@ -1,0 +1,15 @@
+@startuml
+class BloonScriptableObject {
+    + Health : int
+    + Damage : int
+    + Reward : int
+    + Speed : float
+    + LayerBloonSpawnRate : float
+}
+class "List`1"<T> {
+}
+ScriptableObject <|-- BloonScriptableObject
+BloonScriptableObject --> "Type" BloonType
+BloonScriptableObject --> "Sprite" Sprite
+BloonScriptableObject --> "LayeredBloons<BloonType>" "List`1"
+@enduml

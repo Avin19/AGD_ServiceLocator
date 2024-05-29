@@ -1,0 +1,7 @@
+@startuml
+class ProjectileView {
+    + SetController(controller:ProjectileController) : void
+    + SetSprite(spriteToSet:Sprite) : void
+}
+MonoBehaviour <|-- ProjectileView
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+class BloonController {
+    + BloonController(playerService:PlayerService, waveService:WaveService, soundService:SoundService, bloonPrefab:BloonView, bloonContainer:Transform)
+    + Init(bloonScriptableObject:BloonScriptableObject) : void
+    + SetPosition(spawnPosition:Vector3) : void
+    + SetWayPoints(waypointsToSet:List<Vector3>, startingWaypointIndex:int) : void
+    + SetOrderInLayer(orderInLayer:int) : void
+    + TakeDamage(damageToTake:int) : void
+    + FollowWayPoints() : void
+    + OnPopAnimationPlayed() : void
+    + GetBloonType() : BloonType
+}
+enum BloonState {
+    ACTIVE,
+    POPPED,
+}
+BloonController --> "Position" Vector3
+@enduml

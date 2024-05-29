@@ -1,0 +1,9 @@
+@startuml
+class MonkeyCellScriptableObject {
+    + Name : string
+    + Cost : int
+}
+ScriptableObject <|-- MonkeyCellScriptableObject
+MonkeyCellScriptableObject --> "Type" MonkeyType
+MonkeyCellScriptableObject --> "Sprite" Sprite
+@enduml

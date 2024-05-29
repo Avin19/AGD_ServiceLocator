@@ -1,0 +1,13 @@
+@startuml
+class "GenericObjectPool`1"<T> {
+    + ReturnItem(item:T) : void
+}
+class "List`1"<T> {
+}
+class "PooledItem`1"<T> {
+    + Item : T
+    + isUsed : bool
+}
+"GenericObjectPool`1" o-> "pooledItems<PooledItem<T>>" "List`1"
+"GenericObjectPool`1" +-- "PooledItem`1"
+@enduml

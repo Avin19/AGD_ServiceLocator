@@ -1,0 +1,9 @@
+@startuml
+class ProjectilePool {
+    + ProjectilePool(playerService:PlayerService, projectilePrefab:ProjectileView, projectileScriptableObjects:List<ProjectileScriptableObject>)
+    + GetProjectile(projectileType:ProjectileType) : ProjectileController
+}
+class "GenericObjectPool`1"<T> {
+}
+"GenericObjectPool`1" "<ProjectileController>" <|-- ProjectilePool
+@enduml

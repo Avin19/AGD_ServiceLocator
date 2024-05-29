@@ -1,0 +1,11 @@
+@startuml
+class WaveScriptableObject {
+    + SpawnRate : float
+}
+class "List`1"<T> {
+}
+ScriptableObject <|-- WaveScriptableObject
+WaveScriptableObject --> "WaveConfigurations<WaveConfiguration>" "List`1"
+WaveScriptableObject --> "BloonPrefab" BloonView
+WaveScriptableObject --> "BloonScriptableObjects<BloonScriptableObject>" "List`1"
+@enduml

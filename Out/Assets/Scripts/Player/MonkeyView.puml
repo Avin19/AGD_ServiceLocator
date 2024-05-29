@@ -1,0 +1,14 @@
+@startuml
+class MonkeyView {
+    + SetController(controller:MonkeyController) : void
+    + SetTriggerRadius(radiusToSet:float) : void
+    + PlayAnimation(animationToPlay:MonkeyAnimation) : void
+    + MakeRangeVisible(makeVisible:bool) : void
+}
+enum MonkeyAnimation {
+    Idle,
+    Shoot,
+}
+MonoBehaviour <|-- MonkeyView
+MonkeyView --> "RangeSpriteRenderer" SpriteRenderer
+@enduml

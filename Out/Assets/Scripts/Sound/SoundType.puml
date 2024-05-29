@@ -1,0 +1,9 @@
+@startuml
+enum SoundType {
+    BackgroundMusic,
+    BloonPop,
+    WaveComplete,
+    SpawnMonkey,
+    MonkeyShoot,
+}
+@enduml

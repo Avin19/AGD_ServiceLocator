@@ -1,0 +1,5 @@
+@startuml
+class GameService {
+}
+MonoBehaviour <|-- GameService
+@enduml

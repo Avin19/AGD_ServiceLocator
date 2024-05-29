@@ -1,0 +1,14 @@
+@startuml
+class PlayerService {
+    + Money : int <<get>>
+    + PlayerService(playerScriptableObject:PlayerScriptableObject)
+    + Init(mapService:MapService, uiService:UIService, soundService:SoundService) : void
+    + Update() : void
+    + ValidateSpawnPosition(monkeyCost:int, dropPosition:Vector3) : void
+    + TrySpawningMonkey(monkeyType:MonkeyType, monkeyCost:int, dropPosition:Vector3) : void
+    + SpawnMonkey(monkeyType:MonkeyType, spawnPosition:Vector3) : void
+    + ReturnProjectileToPool(projectileToReturn:ProjectileController) : void
+    + TakeDamage(damageToTake:int) : void
+    + GetReward(reward:int) : void
+}
+@enduml

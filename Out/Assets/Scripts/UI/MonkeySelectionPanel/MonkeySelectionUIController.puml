@@ -1,0 +1,6 @@
+@startuml
+class MonkeySelectionUIController {
+    + MonkeySelectionUIController(playerService:PlayerService, cellContainer:Transform, monkeyCellPrefab:MonkeyCellView, monkeyCellScriptableObjects:List<MonkeyCellScriptableObject>)
+    + SetActive(setActive:bool) : void
+}
+@enduml

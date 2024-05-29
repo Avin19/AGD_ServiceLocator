@@ -1,0 +1,6 @@
+@startuml
+class SoundService {
+    + SoundService(soundScriptableObject:SoundScriptableObject, audioEffectSource:AudioSource, bgMusicSource:AudioSource)
+    + PlaySoundEffects(soundType:SoundType, loopSound:bool) : void
+}
+@enduml

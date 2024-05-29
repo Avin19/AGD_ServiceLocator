@@ -1,0 +1,18 @@
+@startuml
+class MapScriptableObject {
+}
+struct MapData {
+    + MapID : int
+}
+class "List`1"<T> {
+}
+ScriptableObject <|-- MapScriptableObject
+MapScriptableObject --> "MapDatas<MapData>" "List`1"
+MapScriptableObject --> "TileOverlay" GameObject
+MapScriptableObject --> "DefaultTileColor" Color
+MapScriptableObject --> "SpawnableTileColor" Color
+MapScriptableObject --> "NonSpawnableTileColor" Color
+MapData --> "MapPrefab" Grid
+MapData --> "SpawningPoint" Vector3
+MapData --> "WayPoints<Vector3>" "List`1"
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class MonkeyController {
+    + MonkeyController(soundService:SoundService, monkeyScriptableObject:MonkeyScriptableObject, projectilePool:ProjectilePool)
+    + SetPosition(positionToSet:Vector3) : void
+    + BloonEnteredRange(bloon:BloonController) : void
+    + BloonExitedRange(bloon:BloonController) : void
+    + CanAttackBloon(bloonType:BloonType) : bool
+    + UpdateMonkey() : void
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class MonkeyCellView {
+    + SetController(controllerToSet:MonkeyCellController) : void
+    + ConfigureCellUI(spriteToSet:Sprite, nameToSet:string, costToSet:int) : void
+}
+MonoBehaviour <|-- MonkeyCellView
+@enduml

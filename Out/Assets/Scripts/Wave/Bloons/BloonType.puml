@@ -1,0 +1,9 @@
+@startuml
+enum BloonType {
+    Red,
+    Blue,
+    Metal,
+    Camo,
+    Boss,
+}
+@enduml

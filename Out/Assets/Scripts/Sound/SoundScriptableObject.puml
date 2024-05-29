@@ -1,0 +1,9 @@
+@startuml
+class SoundScriptableObject {
+}
+struct Sounds {
+}
+ScriptableObject <|-- SoundScriptableObject
+Sounds --> "soundType" SoundType
+Sounds --> "audio" AudioClip
+@enduml

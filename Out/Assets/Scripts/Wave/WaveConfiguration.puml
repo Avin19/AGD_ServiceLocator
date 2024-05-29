@@ -1,0 +1,9 @@
+@startuml
+class WaveConfiguration {
+    + MapID : int
+}
+class "List`1"<T> {
+}
+ScriptableObject <|-- WaveConfiguration
+WaveConfiguration --> "WaveDatas<WaveData>" "List`1"
+@enduml

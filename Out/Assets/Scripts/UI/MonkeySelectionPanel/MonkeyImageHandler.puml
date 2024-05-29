@@ -1,0 +1,14 @@
+@startuml
+class MonkeyImageHandler {
+    + ConfigureImageHandler(spriteToSet:Sprite, owner:MonkeyCellController) : void
+    + OnPointerDown(eventData:PointerEventData) : void
+    + OnDrag(eventData:PointerEventData) : void
+    + OnEndDrag(eventData:PointerEventData) : void
+    + OnPointerUp(eventData:PointerEventData) : void
+}
+MonoBehaviour <|-- MonkeyImageHandler
+IPointerDownHandler <|-- MonkeyImageHandler
+IPointerUpHandler <|-- MonkeyImageHandler
+IDragHandler <|-- MonkeyImageHandler
+IEndDragHandler <|-- MonkeyImageHandler
+@enduml
